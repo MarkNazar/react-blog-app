@@ -5,6 +5,7 @@ import UserLists from './UserLists';
 
 //pages
 import UserSidebar from './UserSidebar';
+import FilterPost from './FilterPost';
 
 const Home = () => {
   const { user } = useAuthContext();
