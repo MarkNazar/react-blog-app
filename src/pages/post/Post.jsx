@@ -44,7 +44,7 @@ const Post = () => {
     return <div className='max-w-screen-lg mx-auto py-6'>Loading...</div>;
   }
   return (
-    <div className='max-w-screen-lg mx-auto py-6'>
+    <div className='max-w-screen-lg mx-auto py-6 px-2 min-h-[calc(100vh_-_122px)]'>
       <main>
         {user.uid === document.createdBy.id && (
           <div className='flex justify-end mb-4'>

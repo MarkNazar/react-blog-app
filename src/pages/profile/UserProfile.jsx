@@ -24,7 +24,7 @@ const UserProfile = () => {
   }
 
   return (
-    <section className='container mx-auto py-10'>
+    <section className='container mx-auto py-10 px-2'>
       {user && (
         <>
           <div className='mx-auto text-center '>
@@ -41,7 +41,7 @@ const UserProfile = () => {
             {isPending && <div className='max-w-screen-lg py-6'>Loading...</div>}
             {posts?.length < 1 && <div className='mt-2 text-sm'>No posts found.</div>}
 
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
               {posts?.map(
                 ({
                   title,

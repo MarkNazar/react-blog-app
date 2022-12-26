@@ -15,7 +15,7 @@ const UserLists = ({ user }) => {
 
   return (
     <div>
-      <div className='px-4 py-6 bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'>
+      <div className='px-4 py-6 bg-white border border-gray-200'>
         <h3 className='border-b pb-2 mb-4'>Users</h3>
         <div className='overflow-y-auto h-60 '>
           {documents?.map(user => {

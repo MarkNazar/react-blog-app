@@ -58,7 +58,7 @@ const Signup = () => {
   };
 
   return (
-    <div className='max-w-[400px] mx-auto mt-20'>
+    <div className='flex flex-col justify-center max-w-[400px] mx-auto px-2 min-h-[calc(100vh_-_122px)]'>
       <h1 className='text-center'>Sign Up</h1>
       <form onSubmit={handleFormSubmit} className='flex flex-col gap-4 h-full'>
         <label>

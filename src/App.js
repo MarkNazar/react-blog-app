@@ -8,6 +8,7 @@ import { Home, Create, Profile, Signup, Login, Post, UserProfile } from './pages
 //styles
 import './App.css';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -16,28 +17,31 @@ function App() {
       {authIsReady && (
         <Router>
           <Navbar />
-          <Routes>
-            <Route path='/' element={user ? <Home /> : <Navigate to='/login' />} />
-            <Route
-              path='/create'
-              element={user ? <Create /> : <Navigate to='/login' />}
-            />
-            <Route
-              path='/profile'
-              element={user ? <Profile /> : <Navigate to='/login' />}
-            />
+          <div className='mt-[70px]'>
+            <Routes>
+              <Route path='/' element={user ? <Home /> : <Navigate to='/login' />} />
+              <Route
+                path='/create'
+                element={user ? <Create /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/profile'
+                element={user ? <Profile /> : <Navigate to='/login' />}
+              />
 
-            <Route
-              path='/post/:id'
-              element={user ? <Post /> : <Navigate to='/login' />}
-            />
-            <Route
-              path='/profile/:id'
-              element={user ? <UserProfile /> : <Navigate to='/login' />}
-            />
-            <Route path='/signup' element={user ? <Navigate to='/' /> : <Signup />} />
-            <Route path='/login' element={user ? <Navigate to='/' /> : <Login />} />
-          </Routes>
+              <Route
+                path='/post/:id'
+                element={user ? <Post /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/profile/:id'
+                element={user ? <UserProfile /> : <Navigate to='/login' />}
+              />
+              <Route path='/signup' element={user ? <Navigate to='/' /> : <Signup />} />
+              <Route path='/login' element={user ? <Navigate to='/' /> : <Login />} />
+            </Routes>
+          </div>
+          <Footer />
         </Router>
       )}
     </div>

@@ -17,9 +17,9 @@ const PostLists = () => {
   }
 
   return (
-    <div className='col-start-2 col-span-4'>
+    <div className='sm:order-2 order-1 sm:col-start-2 sm:col-span-4'>
       {isPending && <div className='max-w-screen-lg mx-auto py-6'>Loading...</div>}
-      <div className='grid grid-cols-3 gap-8'>
+      <div className='grid lg:grid-cols-2 xl:grid-cols-3 gap-8'>
         {posts?.map(document => {
           return <PostCard key={document.id} document={document} />;
         })}

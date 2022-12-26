@@ -93,7 +93,7 @@ const Create = () => {
   }, [response, navigate]);
 
   return (
-    <div className='max-w-[600px] mx-auto mt-20'>
+    <div className='flex flex-col justify-center max-w-[600px] mx-auto px-2 min-h-[calc(100vh_-_122px)]'>
       <h1 className='text-center'>Create A New Post</h1>
       <form className='flex flex-col gap-4' onSubmit={handleFormSubmit}>
         <label>

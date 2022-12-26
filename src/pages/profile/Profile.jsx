@@ -23,7 +23,7 @@ const Profile = () => {
   }
 
   return (
-    <section className='container mx-auto py-10'>
+    <section className='container mx-auto py-10 px-2'>
       <div className='mx-auto text-center '>
         <h1 className='text-center font-medium'>My Profile</h1>
         <div className='w-60 mx-auto px-4 py-6 bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'>
@@ -37,7 +37,7 @@ const Profile = () => {
         {isPending && <div className='max-w-screen-lg py-6'>Loading...</div>}
         {posts?.length < 1 && <div className='mt-2text-sm'>No posts found.</div>}
 
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {posts?.map(
             ({
               title,

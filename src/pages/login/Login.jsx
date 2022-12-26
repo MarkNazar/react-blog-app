@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   return (
-    <div className='max-w-[400px] mx-auto mt-20'>
+    <div className='flex flex-col justify-center max-w-[400px] mx-auto px-2 min-h-[calc(100vh_-_122px)]'>
       <h1 className='text-center'>Login</h1>
       <form onSubmit={handleFormSubmit} className='flex flex-col gap-4 h-full'>
         <label>
@@ -65,7 +65,7 @@ const Login = () => {
         {error && <div className='mt-2 p-2 bg-red-200 text-center text-sm'>{error}</div>}
       </form>
       <p className='text-center mt-6'>
-        Don't have any account?{' '}
+        Don't have an account?{' '}
         <Link to='/signup' className='font-medium border-b-2 pb-1 border-black'>
           Signup now
         </Link>
