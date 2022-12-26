@@ -11,7 +11,8 @@ const UserLists = ({ user }) => {
     '!=',
     user.uid,
   ]);
-  // console.log(documentId());
+
+  const onlineUsers = documents?.filter(document => document.online);
 
   return (
     <div>
@@ -39,6 +40,11 @@ const UserLists = ({ user }) => {
             );
           })}
         </div>
+        {onlineUsers && (
+          <div className='text-gray-400 mt-4 text-sm'>
+            Online User{onlineUsers.length > 1 ? 's' : null}: {onlineUsers.length}
+          </div>
+        )}
       </div>
     </div>
   );

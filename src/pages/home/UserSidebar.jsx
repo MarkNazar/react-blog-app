@@ -8,7 +8,7 @@ const UserSidebar = ({ user }) => {
   return (
     <div className='mb-10'>
       <div className='flex flex-col items-center px-4 py-6 bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'>
-        <Avatar src={user.photoURL} customStyle={'w-[60px] h-[60x]'} />
+        {user.photoURL && <Avatar src={user.photoURL} customStyle={'w-[60px] h-[60x]'} />}
         <p className='mt-2'>{user.displayName}</p>
         <div className='w-full h-[1px] bg-slate-200 my-4'></div>
         <div>
